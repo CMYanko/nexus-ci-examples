@@ -299,8 +299,10 @@ public createGlobalEnvironmentVariables(String key, String value){
         instance.save()
 }
 // *** Please edit the IQ URL to match you environment ***
-createGlobalEnvironmentVariables('IQserver','http://iq:8080')
-println "Configured Environmental Variable for IQ server URL, please chack it matches your configuration"
+createGlobalEnvironmentVariables('IQserver','http://iq-server:8080')
+createGlobalEnvironmentVariables('IQuser','jenkins')
+createGlobalEnvironmentVariables('IQpwd','password')
+println "Configured Environmental Variables for IQ server URL, User, and Password, please chack it matches your configuration"
 
 // save current Jenkins state to disk
 jenkins.save()
